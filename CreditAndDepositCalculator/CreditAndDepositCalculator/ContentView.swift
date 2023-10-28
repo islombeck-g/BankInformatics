@@ -3,32 +3,32 @@ import SwiftUI
 struct ContentView: View {
     
     @StateObject var viewModel: ViewModel = ViewModel()
-
+    
     var body: some View {
-      
+        
         VStack {
             
-            VStack(alignment: .leading) {
-                ScrollView {
+//            ScrollView {
+                VStack(alignment: .leading) {
                     HStack {Spacer()}
                     
                     Text("Кредитный калькулятор")
                         .fontDesign(.rounded)
                         .fontWeight(.bold)
                         .font(.title)
-                        
+                    
                     
                     Picker("Тип платежа", selection: self.$viewModel.loan.paymentType) {
                         
-                            Text("Дифференцированный")
-                                .tag(PaymentType.differential)
-                            
-                            Text("Аннуитетный")
-                                .tag(PaymentType.annuity)
-                        }
-                        .pickerStyle(.segmented)
+                        Text("Дифференцированный")
+                            .tag(PaymentType.differential)
                         
-                        
+                        Text("Аннуитетный")
+                            .tag(PaymentType.annuity)
+                    }
+                    .pickerStyle(.segmented)
+                    
+                    
                     Group {
                         Spacer()
                             .frame(height: 20)
@@ -36,7 +36,7 @@ struct ContentView: View {
                         
                         TextField("Сумма кредита (рубли)", value: $viewModel.loan.amount, formatter: NumberFormatter())
                             .textFieldStyle(.roundedBorder)
-                    
+                        
                     }
                     
                     Group {
@@ -46,7 +46,7 @@ struct ContentView: View {
                         
                         TextField("Срок (месяцы)", value: $viewModel.loan.term, formatter: NumberFormatter())
                             .textFieldStyle(.roundedBorder)
-                    
+                        
                     }
                     Group {
                         Spacer()
@@ -61,35 +61,34 @@ struct ContentView: View {
                     }
                     
                     HStack {
+                        
+                        Button{
+                            self.viewModel.loan.interestRate = 5
+                            self.viewModel.loan.term = 12
+                            self.viewModel.loan.amount = 1200000
+                        }label: {
+                            Text("заполнить")
+                        }.padding()
+                        
                         Spacer()
                         
                         Button(action: self.viewModel.calculateLoan) {
                             Text("Рассчитать")
                         }
+                        .padding()
                         
                     }
+                    
+                    .sheet(isPresented: self.$viewModel.isReady, content: {
+                        SheetView(result: self.viewModel.payments, total: self.viewModel.totalInterest)
+                    })
 
-
-
-                    if !self.viewModel.payments.isEmpty {
-                        Section(header: Text("График платежей")) {
-                            List(self.viewModel.payments, id: \.month) { payment in
-                                Text("Месяц \(payment.month): \(payment.amount, specifier: "%.2f") руб")
-                            }
-                            Text("Общая переплата: \(self.viewModel.totalInterest, specifier: "%.2f") руб")
-                        }
-                    }
                     Spacer()
                 }
-                
-            }
+//            }
             .padding(.horizontal, 16)
-            
-            
         }
     }
-
-    
 }
 
 

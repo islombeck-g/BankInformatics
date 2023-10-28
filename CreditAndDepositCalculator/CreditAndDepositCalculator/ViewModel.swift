@@ -5,12 +5,15 @@ final class ViewModel: ObservableObject {
     @Published var loan = Loan(paymentType: .differential, amount: 0, term: 0, interestRate: 0)
     @Published var payments: [Payment] = []
     @Published var totalInterest: Double = 0
+    @Published var isReady = false
+    
     
     
     func calculateLoan() {
         let (calculatedPayments, calculatedInterest) = calculatePayments(loan: loan)
         payments = calculatedPayments
         totalInterest = calculatedInterest
+        self.isReady = true
     }
 
     func calculatePayments(loan: Loan) -> ([Payment], Double) {
