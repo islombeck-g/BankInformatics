@@ -7,10 +7,8 @@ final class ViewModel: ObservableObject {
     @Published var totalInterest: Double = 0
     @Published var isReady = false
     
-    
-    
-    func calculateLoan() {
-        let (calculatedPayments, calculatedInterest) = calculatePayments(loan: loan)
+    func calculateLoan(amount: Double, term: Double, interestRate: Double) {
+        let (calculatedPayments, calculatedInterest) = calculatePayments(loan: Loan(paymentType:self.loan.paymentType , amount: amount, term: Int(term), interestRate: interestRate))
         payments = calculatedPayments
         totalInterest = calculatedInterest
         self.isReady = true

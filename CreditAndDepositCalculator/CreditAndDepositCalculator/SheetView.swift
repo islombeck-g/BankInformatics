@@ -34,9 +34,9 @@ struct SheetView: View {
 
 #Preview {
     SheetView(result: [
-        Payment(month: 1, amount: 12),
+        Payment(month: 1, amount: 1002),
         Payment(month: 2, amount: 12),
         Payment(month: 3, amount: 12),
         Payment(month: 4, amount: 12),
-        Payment(month: 5, amount: 12)], total: 60.0)
+        Payment(month: 5, amount: 12)], total: 60000.0)
 }

@@ -8,23 +8,29 @@
 
 /* Begin PBXBuildFile section */
 		63674EA32AECBFEE00AA9FD4 /* SheetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63674EA22AECBFEE00AA9FD4 /* SheetView.swift */; };
+		63674EA52AECCAE300AA9FD4 /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63674EA42AECCAE300AA9FD4 /* CustomTextField.swift */; };
 		63832CDB2AEC2B7F006F2A89 /* CreditAndDepositCalculatorApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63832CDA2AEC2B7F006F2A89 /* CreditAndDepositCalculatorApp.swift */; };
-		63832CDD2AEC2B7F006F2A89 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63832CDC2AEC2B7F006F2A89 /* ContentView.swift */; };
+		63832CDD2AEC2B7F006F2A89 /* First.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63832CDC2AEC2B7F006F2A89 /* First.swift */; };
 		63832CDF2AEC2B80006F2A89 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 63832CDE2AEC2B80006F2A89 /* Assets.xcassets */; };
 		63832CE22AEC2B80006F2A89 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 63832CE12AEC2B80006F2A89 /* Preview Assets.xcassets */; };
 		63832CE92AEC3115006F2A89 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63832CE82AEC3115006F2A89 /* Model.swift */; };
 		63832CEB2AEC3AE9006F2A89 /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63832CEA2AEC3AE9006F2A89 /* ViewModel.swift */; };
+		639302842AEEDCAD00CD12FC /* TabViewOfApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 639302832AEEDCAD00CD12FC /* TabViewOfApp.swift */; };
+		639302862AEEDE6E00CD12FC /* Second.swift in Sources */ = {isa = PBXBuildFile; fileRef = 639302852AEEDE6E00CD12FC /* Second.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		63674EA22AECBFEE00AA9FD4 /* SheetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SheetView.swift; sourceTree = "<group>"; };
+		63674EA42AECCAE300AA9FD4 /* CustomTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
 		63832CD72AEC2B7F006F2A89 /* CreditAndDepositCalculator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CreditAndDepositCalculator.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		63832CDA2AEC2B7F006F2A89 /* CreditAndDepositCalculatorApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreditAndDepositCalculatorApp.swift; sourceTree = "<group>"; };
-		63832CDC2AEC2B7F006F2A89 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		63832CDC2AEC2B7F006F2A89 /* First.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = First.swift; sourceTree = "<group>"; };
 		63832CDE2AEC2B80006F2A89 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		63832CE12AEC2B80006F2A89 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		63832CE82AEC3115006F2A89 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
 		63832CEA2AEC3AE9006F2A89 /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
+		639302832AEEDCAD00CD12FC /* TabViewOfApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabViewOfApp.swift; sourceTree = "<group>"; };
+		639302852AEEDE6E00CD12FC /* Second.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Second.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -41,6 +47,7 @@
 		63832CCE2AEC2B7F006F2A89 = {
 			isa = PBXGroup;
 			children = (
+				63674EA42AECCAE300AA9FD4 /* CustomTextField.swift */,
 				63832CD92AEC2B7F006F2A89 /* CreditAndDepositCalculator */,
 				63832CD82AEC2B7F006F2A89 /* Products */,
 			);
@@ -58,10 +65,12 @@
 			isa = PBXGroup;
 			children = (
 				63832CDA2AEC2B7F006F2A89 /* CreditAndDepositCalculatorApp.swift */,
-				63832CDC2AEC2B7F006F2A89 /* ContentView.swift */,
+				63832CDC2AEC2B7F006F2A89 /* First.swift */,
 				63832CE82AEC3115006F2A89 /* Model.swift */,
 				63832CEA2AEC3AE9006F2A89 /* ViewModel.swift */,
 				63674EA22AECBFEE00AA9FD4 /* SheetView.swift */,
+				639302832AEEDCAD00CD12FC /* TabViewOfApp.swift */,
+				639302852AEEDE6E00CD12FC /* Second.swift */,
 				63832CDE2AEC2B80006F2A89 /* Assets.xcassets */,
 				63832CE02AEC2B80006F2A89 /* Preview Content */,
 			);
@@ -147,8 +156,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				63832CE92AEC3115006F2A89 /* Model.swift in Sources */,
-				63832CDD2AEC2B7F006F2A89 /* ContentView.swift in Sources */,
+				63832CDD2AEC2B7F006F2A89 /* First.swift in Sources */,
+				63674EA52AECCAE300AA9FD4 /* CustomTextField.swift in Sources */,
+				639302862AEEDE6E00CD12FC /* Second.swift in Sources */,
 				63674EA32AECBFEE00AA9FD4 /* SheetView.swift in Sources */,
+				639302842AEEDCAD00CD12FC /* TabViewOfApp.swift in Sources */,
 				63832CEB2AEC3AE9006F2A89 /* ViewModel.swift in Sources */,
 				63832CDB2AEC2B7F006F2A89 /* CreditAndDepositCalculatorApp.swift in Sources */,
 			);

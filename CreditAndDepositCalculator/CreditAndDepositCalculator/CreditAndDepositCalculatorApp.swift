@@ -4,7 +4,7 @@ import SwiftUI
 struct CreditAndDepositCalculatorApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            TabViewOfApp()
         }
     }
 }
