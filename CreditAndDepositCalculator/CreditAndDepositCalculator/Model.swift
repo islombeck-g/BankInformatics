@@ -1,16 +1,26 @@
 import Foundation
+import SwiftUI
 
-struct Loan {
-    var paymentType: PaymentType // Дифференцированный или аннуитетный
-    var amount: Double // Сумма кредита в рублях
-    var term: Int // Срок кредита в месяцах
-    var interestRate: Double // Процентная ставка в годовых
+enum LoanPaymentType: String {
+    case differentiated = "Дифференцированный"
+    case annuity = "Аннуитетный"
 }
-enum PaymentType {
-    case differential
-    case annuity
+
+extension Decimal {
+    var doubleValue: Double {
+        return NSDecimalNumber(decimal: self).doubleValue
+    }
 }
-struct Payment {
-    var month: Int
-    var amount: Double
+
+struct MonthlyResult: Identifiable {
+    let id = UUID()
+    let month: Int
+    let amount: Double
+}
+
+extension View {
+    func hideKeyboard() {
+        let resign = #selector(UIResponder.resignFirstResponder)
+        UIApplication.shared.sendAction(resign, to: nil, from: nil, for: nil)
+    }
 }

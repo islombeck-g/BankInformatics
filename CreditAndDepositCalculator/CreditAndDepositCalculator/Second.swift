@@ -91,14 +91,4 @@ struct Second: View {
     Second()
 }
 
-struct MonthlyResult: Identifiable {
-    let id = UUID()
-    let month: Int
-    let amount: Double
-}
-extension View {
-    func hideKeyboard() {
-        let resign = #selector(UIResponder.resignFirstResponder)
-        UIApplication.shared.sendAction(resign, to: nil, from: nil, for: nil)
-    }
-}
+
